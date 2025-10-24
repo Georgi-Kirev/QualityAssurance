@@ -11,4 +11,4 @@ Example Jira tickets and workflow
 
 Evidence of consistent QA practice
 
-Tools used: Jira, TestRail, GitHub, Excel, Chrome DevTools
+Tools used: Jira, Qase, GitHub, Excel, Chrome DevTools
