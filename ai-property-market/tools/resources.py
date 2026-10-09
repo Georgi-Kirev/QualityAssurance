@@ -340,6 +340,7 @@ def calculate_resources(
     worker_ram_gb: float = WORKER_RAM_GB,
     hard_limit: int = MAX_WORKERS_HARD_LIMIT,
     reserved_cores: int = RESERVED_CORES,
+    load_monitor: LoadMonitor = None,
 ) -> dict:
     """
     Изчислява колко паралелни worker-а да пуснем.
@@ -347,8 +348,15 @@ def calculate_resources(
     Основано на РЕАЛНИ физически ядра (без хипер-трейдинг) и
     винаги с поне 1 запазено ядро за операционната система.
 
+    load_monitor - ако е подаден, чете натоварването от него
+    вместо от глобалния монитор. Без този параметър
+    plan_workers() бише смесила подадения фейк с реални
+    данни за RAM в един и същи речник.
+
     Връща речник с пълна диагностика, за да може да се логва.
     """
+
+    load_monitor = load_monitor or monitor
 
     cpu_count = physical_cpu_count()
 
@@ -358,7 +366,7 @@ def calculate_resources(
     )
 
     # ---- RAM ----
-    sample = monitor.sample()
+    sample = load_monitor.sample()
 
     available_ram_gb = sample["available_ram_gb"]
 
@@ -441,28 +449,18 @@ def plan_workers(
 
     load_monitor = load_monitor or monitor
 
+    resources = calculate_resources(
+        cpu_target=cpu_target,
+        ram_target=ram_target,
+        worker_ram_gb=worker_ram_gb,
+        hard_limit=hard_limit,
+        reserved_cores=reserved_cores,
+        load_monitor=load_monitor,
+    )
+
     if target_workers is None:
-
-        resources = calculate_resources(
-            cpu_target=cpu_target,
-            ram_target=ram_target,
-            worker_ram_gb=worker_ram_gb,
-            hard_limit=hard_limit,
-            reserved_cores=reserved_cores,
-        )
-
         base_workers = resources["workers"]
-
     else:
-
-        resources = calculate_resources(
-            cpu_target=cpu_target,
-            ram_target=ram_target,
-            worker_ram_gb=worker_ram_gb,
-            hard_limit=hard_limit,
-            reserved_cores=reserved_cores,
-        )
-
         base_workers = int(target_workers)
 
     sample = load_monitor.sample()

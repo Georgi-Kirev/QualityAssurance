@@ -22,6 +22,31 @@ class FakeMonitor:
         return dict(self.sample_value)
 
 
+@pytest.fixture
+def cpu_topology(resources, monkeypatch):
+    """
+    Фиксира броя физически ядра, за да не зависят очакванията
+    от машината, на която се пускат тестовете.
+
+    Без това изчислението на worker-и е Истинска функция на
+    хардуера: на машина с 8 ядра ceiling е 7, на CI runner с
+    2 vCPU е 1. Един и същ тест тогава дава 4 workers локално и
+    1 в GitHub Actions - не защото кодът е счупен, а защото
+    очакването е било забутано за конкретен хардуер.
+
+    Фиксираме на 8 физически ядра и всички числа стават
+    предвидими на всяка машина.
+    """
+
+    monkeypatch.setattr(
+        resources,
+        "physical_cpu_count",
+        lambda: 8,
+    )
+
+    return 8
+
+
 # ============================================================
 # TAG: CPU TOPOLOGY
 # ============================================================
@@ -210,9 +235,12 @@ def test_plan_workers_critical_ram_drops_to_one(resources):
     assert plan["workers"] == 1
 
 
-def test_plan_workers_scales_down_with_ram(resources):
+def test_plan_workers_scales_down_with_ram(
+    resources, cpu_topology
+):
     # 3 GB налични, 0.5 GB на worker, 80% ->
     # floor(3 * 0.8 / 0.5) = 4
+    # CPU не ограничава: ceiling = 8 - 1 = 7
     plan = resources.plan_workers(
         load_monitor=FakeMonitor(
             cpu=5.0, ram=3.0
@@ -222,7 +250,9 @@ def test_plan_workers_scales_down_with_ram(resources):
     assert plan["workers"] == 4
 
 
-def test_plan_workers_scales_up_when_ram_frees(resources):
+def test_plan_workers_scales_up_when_ram_frees(
+    resources, cpu_topology
+):
     low = resources.plan_workers(
         load_monitor=FakeMonitor(
             cpu=5.0, ram=3.0
@@ -257,6 +287,46 @@ def test_plan_workers_reports_live_cpu(resources):
     )
 
     assert plan["cpu_percent"] == 42.0
+
+
+def test_plan_workers_passes_its_monitor_to_the_estimator(
+    resources, cpu_topology
+):
+    """
+    Регресия: calculate_resources() четеше ГЛОБАЛНИЯ
+    монитор вместо подадения на plan_workers().
+
+    Последицата беше смесен речник: workers бяха пресметнати
+    по реалната памет на машината, а cpu_percent и
+    available_ram_gb идваха от фейка. При 3 GB фейк RAM и
+    реален хардуер без памет резултатът ставаше
+    непредвидим - точно това направи два теста да падат
+    само в CI.
+    """
+
+    plan = resources.plan_workers(
+        load_monitor=FakeMonitor(
+            cpu=5.0, ram=3.0
+        )
+    )
+
+    # И трите полета трябва да идват от ЕДИН И СЪЩ
+    # източник - фейка.
+    assert plan["available_ram_gb"] == 3.0
+    assert plan["ram_workers"] == 4
+    assert plan["workers"] == 4
+
+
+def test_calculate_resources_accepts_explicit_monitor(
+    resources, cpu_topology
+):
+    result = resources.calculate_resources(
+        load_monitor=FakeMonitor(
+            cpu=5.0, ram=30.0
+        )
+    )
+
+    assert result["available_ram_gb"] == 30.0
 
 
 # ============================================================
