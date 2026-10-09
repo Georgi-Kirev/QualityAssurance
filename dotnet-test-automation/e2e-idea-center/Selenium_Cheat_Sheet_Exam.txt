@@ -1,0 +1,401 @@
+SELENIUM CHEAT SHEET – C# WebDriver + Selenium IDE 3.17.4
+===============================================================
+
+1. VISUAL STUDIO vs SELENIUM IDE
+
+C# WebDriver:
+driver.FindElement(By.Id("typePasswordX-2")).SendKeys("1234");
+driver.FindElement(By.CssSelector(".btn-outline-info")).Click();
+
+Selenium IDE:
+Command: type       Target: id=typePasswordX-2       Value: 1234
+Command: click      Target: css=.btn-outline-info
+
+
+2. ID
+
+HTML: <input id="username">
+
+C#:  By.Id("username")
+IDE:  id=username
+
+Examples:
+1) <input id="username">
+   C#: By.Id("username")   IDE: id=username
+
+2) <button id="login-button">
+   C#: By.Id("login-button")   IDE: id=login-button
+
+3) <input id="form3Example1c" class="form-control">
+   C#: By.Id("form3Example1c")   IDE: id=form3Example1c
+
+4) <textarea id="form3Example4cd" name="description" class="form-control">
+   C#: By.Id("form3Example4cd")   IDE: id=form3Example4cd
+
+ID в IDE не използва [] или кавички:
+id=typePasswordX-2
+
+
+3. NAME
+
+HTML: <input name="email">
+
+C#:  By.Name("email")
+IDE:  name=email
+
+Examples:
+1) <input name="email">
+   C#: By.Name("email")   IDE: name=email
+
+2) <input name="password">
+   C#: By.Name("password")   IDE: name=password
+
+3) <input type="text" name="userEmail" class="form-control login-input">
+   C#: By.Name("userEmail")   IDE: name=userEmail
+
+4) <select name="country" id="country-select" class="form-select">
+   C#: By.Name("country")   IDE: name=country
+
+
+4. CLASS
+
+HTML: <button class="btn btn-primary">Login</button>
+
+Един class:
+C#:  By.ClassName("btn")
+IDE:  class=btn
+
+Няколко class-а → CSS:
+C#:  By.CssSelector(".btn.btn-primary")
+IDE:  css=.btn.btn-primary
+
+Examples:
+1) class="login-button"
+   C#: By.ClassName("login-button")   IDE: class=login-button
+
+2) class="btn btn-primary"
+   C#: By.CssSelector(".btn.btn-primary")   IDE: css=.btn.btn-primary
+
+3) <button class="btn btn-primary btn-lg btn-block">
+   C#: By.CssSelector(".btn.btn-primary.btn-lg.btn-block")
+   IDE: css=.btn.btn-primary.btn-lg.btn-block
+
+4) <div class="card mb-4 box-shadow">
+   C#: By.CssSelector(".card.mb-4.box-shadow")
+   IDE: css=.card.mb-4.box-shadow
+
+ВАЖНО: By.ClassName() приема само един class.
+
+
+5. CSS SELECTOR
+
+Основни символи:
+# = ID
+. = CLASS
+[attribute='value'] = attribute
+> = директно дете
+space = елемент вътре в друг
+:nth-child(n) = конкретно дете
+* = всеки елемент
+
+Examples:
+1) ID:
+   C#: By.CssSelector("#username")
+   IDE: css=#username
+
+2) CLASS:
+   C#: By.CssSelector(".btn-outline-info")
+   IDE: css=.btn-outline-info
+
+3) Attribute:
+   <button type="submit">Add</button>
+   C#: By.CssSelector("button[type='submit']")
+   IDE: css=button[type='submit']
+
+4) По-сложен:
+   Вторият carousel item:
+   C#: By.CssSelector(".carousel-item:nth-child(2)")
+   IDE: css=.carousel-item:nth-child(2)
+
+Още:
+input[type='text']
+input[name='email']
+button[type='submit']
+div.card .card-text
+a[href*='/Ideas/Read']
+
+*= съдържа    ^= започва с    $= завършва с
+
+Пример:
+a[href*='/Ideas/Read']
+= <a>, чийто href съдържа /Ideas/Read.
+
+
+6. XPATH
+
+Обикновено започва с // или /.
+
+Основен синтаксис:
+ //tag[@attribute='value']
+
+Примери:
+1) //input[@id='username']
+   C#: By.XPath("//input[@id='username']")
+   IDE: xpath=//input[@id='username']
+
+2) //button[@class='btn-primary']
+   C#: By.XPath("//button[@class='btn-primary']")
+   IDE: xpath=//button[@class='btn-primary']
+
+3) По-сложен – text:
+   //button[text()='Add']
+   C#: By.XPath("//button[text()='Add']")
+   IDE: xpath=//button[text()='Add']
+
+4) По-сложен – contains:
+   //a[contains(@href,'/Ideas/Read')]
+   C#: By.XPath("//a[contains(@href,'/Ideas/Read')]")
+   IDE: xpath=//a[contains(@href,'/Ideas/Read')]
+
+Още:
+ //input[@name='email']
+ //button[@type='submit']
+ //div[contains(@class,'carousel-item')]
+ //button[contains(text(),'Login')]
+
+XPath:
+@ = attribute
+[] = условие
+'' = стойност
+
+Правилно:
+ //button[@type='submit']
+Грешно:
+ //button[type='submit']
+
+
+7. LINK TEXT
+
+За <a> елементи.
+
+HTML: <a href="/Ideas/Create">Create Idea</a>
+
+C#:  By.LinkText("Create Idea")
+IDE:  linkText=Create Idea
+
+Examples:
+1) Login
+   C#: By.LinkText("Login")   IDE: linkText=Login
+
+2) Create Idea
+   C#: By.LinkText("Create Idea")   IDE: linkText=Create Idea
+
+3) <a href="/Ideas/MyIdeas">My Ideas</a>
+   C#: By.LinkText("My Ideas")   IDE: linkText=My Ideas
+
+4) <a href="/Users/Login">Login to your account</a>
+   C#: By.LinkText("Login to your account")
+   IDE: linkText=Login to your account
+
+Partial:
+C#: By.PartialLinkText("Login")
+IDE: partialLinkText=Login
+
+
+8. TAG NAME
+
+Намира HTML tag: h1, button, input, div, a.
+
+C#:  By.TagName("h1")
+IDE:  tagName=h1
+
+Examples:
+1) By.TagName("h1")       IDE: tagName=h1
+2) By.TagName("button")   IDE: tagName=button
+3) By.TagName("input")    IDE: tagName=input
+4) By.TagName("a")        IDE: tagName=a
+
+Ако има много такива елементи, TagName често е недостатъчно конкретен.
+
+
+9. ATTRIBUTE SELECTORS – CSS
+
+[type='submit']       точно равенство
+[href*='Ideas']       съдържа
+[href^='/Ideas']      започва с
+[href$='Read']        завършва с
+
+Examples:
+button[type='submit']
+input[name='email']
+a[href*='/Ideas/Read']
+
+
+10. CLICK
+
+C#:
+driver.FindElement(By.Id("login-button")).Click();
+driver.FindElement(By.CssSelector("button[type='submit']")).Click();
+
+IDE:
+Command: click
+Target: id=login-button
+
+или:
+Command: click
+Target: css=button[type='submit']
+
+
+11. SENDKEYS / TYPE
+
+C#:
+driver.FindElement(By.Id("username")).SendKeys("test@test.com");
+
+IDE:
+Command: type
+Target: id=username
+Value: test@test.com
+
+Изчистване:
+element.Clear();
+element.SendKeys("new text");
+
+
+12. ASSERT vs VERIFY
+
+ASSERT = критична проверка. При провал тестът спира.
+
+C#:
+Assert.That(driver.Url, Does.Contain("/Ideas/Create"));
+
+VERIFY = некритична проверка; тестът може да продължи.
+
+IDE:
+Command: verify element present
+Target: css=.btn-outline-info
+
+За проверка дали елемент съществува използвай:
+verify element present
+
+
+13. WAIT
+
+Не разчитай автоматично на Thread.Sleep().
+
+C#:
+var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+wait.Until(d => d.Url.Contains("/Ideas/Create"));
+
+За елемент:
+wait.Until(
+    SeleniumExtras.WaitHelpers.ExpectedConditions
+        .ElementIsVisible(By.Id("username"))
+);
+
+Implicit wait:
+driver.Manage().Timeouts().ImplicitWait =
+    TimeSpan.FromSeconds(10);
+
+
+14. НАЙ-ЧЕСТИ ГРЕШКИ
+
+ID:
+IDE: id=username
+НЕ: id='username'
+
+CSS ID:
+css=#username
+
+CSS CLASS:
+css=.btn-outline-info
+
+CSS attribute:
+css=button[type='submit']
+
+XPath:
+xpath=//button[@type='submit']
+
+XPath text:
+xpath=//button[text()='Add']
+
+XPath contains:
+xpath=//button[contains(text(),'Add')]
+
+CSS НЕ използва @:
+Правилно: button[type='submit']
+Грешно:   button[@type='submit']
+
+XPath използва @:
+Правилно: //button[@type='submit']
+
+
+15. КАК ДА РАЗПОЗНАВАМ ЛОКАТОРА
+
+id="username"          → ID
+name="email"           → NAME
+class="btn btn-primary"→ CLASS / CSS
+<button>               → TAG NAME
+<a>Login</a>           → LINK TEXT
+type="submit"          → ATTRIBUTE
+
+Комбинации → CSS или XPath.
+
+
+16. БЪРЗА ТАБЛИЦА
+
+HTML                         CSS                    XPath
+id="login"                   #login                 //*[@id='login']
+class="btn"                  .btn                   //*[@class='btn']
+type="submit"                [type='submit']        //*[@type='submit']
+button + type                button[type='submit']  //button[@type='submit']
+
+C#:
+By.Id("login")
+By.Name("email")
+By.ClassName("btn")
+By.CssSelector(".btn.btn-primary")
+By.CssSelector("button[type='submit']")
+By.XPath("//button[@type='submit']")
+By.LinkText("Login")
+By.PartialLinkText("Log")
+By.TagName("button")
+
+Selenium IDE:
+id=login
+name=email
+class=btn
+css=.btn.btn-primary
+css=button[type='submit']
+xpath=//button[@type='submit']
+linkText=Login
+partialLinkText=Log
+tagName=button
+
+
+17. ЗАПОМНИ ЗА ИЗПИТА
+
+#   → ID в CSS
+.   → CLASS в CSS
+@   → ATTRIBUTE в XPath
+[]  → условие в XPath / attribute selector в CSS
+''  → стойност в XPath/CSS attribute
+//  → XPath търсене
+*   → всеки елемент в CSS
+:   → CSS pseudo-selector, напр. :nth-child(2)
+
+Пример:
+CSS:
+button[type='submit']
+
+XPath:
+//button[@type='submit']
+
+CSS:
+.carousel-item:nth-child(2)
+
+XPath:
+(//*[@class='carousel-item'])[2]
+
+НАЙ-ВАЖНО:
+CSS → # за ID, . за class
+XPath → @ за attribute, [] за условие

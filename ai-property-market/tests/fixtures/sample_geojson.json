@@ -1,0 +1,129 @@
+{
+  "type": "FeatureCollection",
+  "name": "sample_zones",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "zone-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[23.3210, 42.6970], [23.3310, 42.6970], [23.3310, 42.7070], [23.3210, 42.7070], [23.3210, 42.6970]]
+        ]
+      },
+      "properties": {
+        "object_id": 1,
+        "ge_id": 10,
+        "regname": "ЦГЧ Зона А - север",
+        "kvartal": "ЦГЧ",
+        "godina": 2019,
+        "cena_ap": 116813.079230769,
+        "cena_ap_kv_m": 1425.1875,
+        "cena_ofis": 794403.590576923,
+        "cena_ofis_kv_m": 1512.23961538462,
+        "naem_ap": 562.993076923077,
+        "naem_ap_kv_m": 7.89019230769231,
+        "area_kv_m": 98225.38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zone-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[23.3400, 42.7100], [23.3500, 42.7100], [23.3500, 42.7200], [23.3400, 42.7200], [23.3400, 42.7100]]
+        ]
+      },
+      "properties": {
+        "object_id": 2,
+        "ge_id": 11,
+        "regname": "ж.к. Люлин - 1 мр",
+        "kvartal": "Люлин - 1",
+        "godina": 2002,
+        "cena_ap": 11722.9565217391,
+        "cena_ap_kv_m": 168.303913043478,
+        "cena_ofis": 9592.0,
+        "cena_ofis_kv_m": 274.05,
+        "naem_ap": 77.4,
+        "naem_ap_kv_m": 1.316,
+        "area_kv_m": 543145.06
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zone-3",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [[[23.3600, 42.7300], [23.3700, 42.7300], [23.3700, 42.7400], [23.3600, 42.7400], [23.3600, 42.7300]]],
+          [[[23.3800, 42.7500], [23.3900, 42.7500], [23.3900, 42.7600], [23.3800, 42.7600], [23.3800, 42.7500]]]
+        ]
+      },
+      "properties": {
+        "object_id": 3,
+        "ge_id": 12,
+        "regname": "ж.к. Левски - зона В",
+        "kvartal": "Левски - зона В",
+        "godina": 2006,
+        "cena_ap": 30611.3018867925,
+        "cena_ap_kv_m": 459.809245283019,
+        "cena_ofis": 918785.714285714,
+        "cena_ofis_kv_m": 2122.36571428571,
+        "naem_ap": 202.673076923077,
+        "naem_ap_kv_m": 2.95788461538462,
+        "area_kv_m": 1066626.82
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "water-1",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [[23.6100, 42.4200], [23.6200, 42.4300]],
+          [[23.6300, 42.4400], [23.6400, 42.4500]]
+        ]
+      },
+      "properties": {
+        "object_id": 4,
+        "kanal": 0.0,
+        "name_": "Искър",
+        "length_m": 650.5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "water-2",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [[23.6500, 42.4600], [23.6600, 42.4700]]
+        ]
+      },
+      "properties": {
+        "object_id": 5,
+        "kanal": 0.0,
+        "name_": null,
+        "length_m": 120.75
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "green-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[23.7000, 42.5000], [23.7100, 42.5000], [23.7100, 42.5100], [23.7000, 42.5100], [23.7000, 42.5000]]
+        ]
+      },
+      "properties": {
+        "object_id": 6,
+        "type_": 1.0,
+        "name_": "Парк Борисова градина",
+        "area_kv_m": 3610.93
+      }
+    }
+  ]
+}

@@ -1,0 +1,1437 @@
+{
+  "type": "FeatureCollection",
+  "name": "ikonomika.imoti_ceni_ge",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "prop-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3245,
+              42.7005
+            ],
+            [
+              23.3275,
+              42.7005
+            ],
+            [
+              23.3275,
+              42.7035
+            ],
+            [
+              23.3245,
+              42.7035
+            ],
+            [
+              23.3245,
+              42.7005
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 1,
+        "regname": "ЦГЧ Зона А - север",
+        "kvartal": "ЦГЧ",
+        "godina": 1999,
+        "etaz": 6,
+        "spalen": 1,
+        "cena_ap": 423347.25,
+        "area_kv_m": 68.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3245,
+              42.7005
+            ],
+            [
+              23.3275,
+              42.7005
+            ],
+            [
+              23.3275,
+              42.7035
+            ],
+            [
+              23.3245,
+              42.7035
+            ],
+            [
+              23.3245,
+              42.7005
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 2,
+        "regname": "ЦГЧ Зона Б - юг",
+        "kvartal": "ЦГЧ",
+        "godina": 1999,
+        "etaz": 6,
+        "spalen": 1,
+        "cena_ap": 349303.56,
+        "area_kv_m": 52.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3435,
+              42.7135
+            ],
+            [
+              23.3465,
+              42.7135
+            ],
+            [
+              23.3465,
+              42.7165
+            ],
+            [
+              23.3435,
+              42.7165
+            ],
+            [
+              23.3435,
+              42.7135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 3,
+        "regname": "ж.к. Люлин - 1 микрорайон",
+        "kvartal": "Люлин - 1",
+        "godina": 2006,
+        "etaz": 8,
+        "spalen": 1,
+        "cena_ap": 238777.38,
+        "area_kv_m": 74.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-4",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3505,
+              42.7205
+            ],
+            [
+              23.3535,
+              42.7205
+            ],
+            [
+              23.3535,
+              42.7235
+            ],
+            [
+              23.3505,
+              42.7235
+            ],
+            [
+              23.3505,
+              42.7205
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 4,
+        "regname": "ж.к. Люлин - 2 микрорайон",
+        "kvartal": "Люлин - 2",
+        "godina": 2010,
+        "etaz": 9,
+        "spalen": 1,
+        "cena_ap": 222209.39,
+        "area_kv_m": 61.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3635,
+              42.7335
+            ],
+            [
+              23.3665,
+              42.7335
+            ],
+            [
+              23.3665,
+              42.7365
+            ],
+            [
+              23.3635,
+              42.7365
+            ],
+            [
+              23.3635,
+              42.7335
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 5,
+        "regname": "ж.к. Левски - зона В",
+        "kvartal": "Левски - зона В",
+        "godina": 2012,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 331013.64,
+        "area_kv_m": 88.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-6",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3365,
+              42.6865
+            ],
+            [
+              23.3395,
+              42.6865
+            ],
+            [
+              23.3395,
+              42.6895
+            ],
+            [
+              23.3365,
+              42.6895
+            ],
+            [
+              23.3365,
+              42.6865
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 6,
+        "regname": "ж.к. Слатина - зона Б-5",
+        "kvartal": "Слатина",
+        "godina": 2009,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 255987.9,
+        "area_kv_m": 63.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-7",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3275,
+              42.7425
+            ],
+            [
+              23.3305,
+              42.7425
+            ],
+            [
+              23.3305,
+              42.7455
+            ],
+            [
+              23.3275,
+              42.7455
+            ],
+            [
+              23.3275,
+              42.7425
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 7,
+        "regname": "ж.к. ОвчагОрловото",
+        "kvartal": "ОвчагОрловото",
+        "godina": 1987,
+        "etaz": 4,
+        "spalen": 1,
+        "cena_ap": 404654.06,
+        "area_kv_m": 95.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-8",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3395,
+              42.7505
+            ],
+            [
+              23.3425,
+              42.7505
+            ],
+            [
+              23.3425,
+              42.7535
+            ],
+            [
+              23.3395,
+              42.7535
+            ],
+            [
+              23.3395,
+              42.7505
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 8,
+        "regname": "ж.к. Драговци",
+        "kvartal": "Драговци",
+        "godina": 2023,
+        "etaz": 6,
+        "spalen": 1,
+        "cena_ap": 306707.23,
+        "area_kv_m": 57.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-9",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3095,
+              42.6935
+            ],
+            [
+              23.3125,
+              42.6935
+            ],
+            [
+              23.3125,
+              42.6965
+            ],
+            [
+              23.3095,
+              42.6965
+            ],
+            [
+              23.3095,
+              42.6935
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 9,
+        "regname": "ж.к. Витоша",
+        "kvartal": "Витоша",
+        "godina": 2009,
+        "etaz": 9,
+        "spalen": 1,
+        "cena_ap": 607222.9,
+        "area_kv_m": 120.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-10",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3545,
+              42.7045
+            ],
+            [
+              23.3575,
+              42.7045
+            ],
+            [
+              23.3575,
+              42.7075
+            ],
+            [
+              23.3545,
+              42.7075
+            ],
+            [
+              23.3545,
+              42.7045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 10,
+        "regname": "ж.к. Яворов",
+        "kvartal": "Яворов",
+        "godina": 1993,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 235551.22,
+        "area_kv_m": 45.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-11",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3605,
+              42.6915
+            ],
+            [
+              23.3635,
+              42.6915
+            ],
+            [
+              23.3635,
+              42.6945
+            ],
+            [
+              23.3605,
+              42.6945
+            ],
+            [
+              23.3605,
+              42.6915
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 11,
+        "regname": "ж.к. Обединение",
+        "kvartal": "Обединение",
+        "godina": 1999,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 298771.65,
+        "area_kv_m": 79.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-12",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3745,
+              42.6825
+            ],
+            [
+              23.3775,
+              42.6825
+            ],
+            [
+              23.3775,
+              42.6855
+            ],
+            [
+              23.3745,
+              42.6855
+            ],
+            [
+              23.3745,
+              42.6825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 12,
+        "regname": "ж.к. Младост 1",
+        "kvartal": "Младост - 1",
+        "godina": 2000,
+        "etaz": 6,
+        "spalen": 1,
+        "cena_ap": 176924.42,
+        "area_kv_m": 58.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-13",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3875,
+              42.6695
+            ],
+            [
+              23.3905,
+              42.6695
+            ],
+            [
+              23.3905,
+              42.6725
+            ],
+            [
+              23.3875,
+              42.6725
+            ],
+            [
+              23.3875,
+              42.6695
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 13,
+        "regname": "ж.к. Младост 3",
+        "kvartal": "Младост - 3",
+        "godina": 2004,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 191615.5,
+        "area_kv_m": 64.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-14",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3575,
+              42.7265
+            ],
+            [
+              23.360500000000002,
+              42.7265
+            ],
+            [
+              23.360500000000002,
+              42.7295
+            ],
+            [
+              23.3575,
+              42.7295
+            ],
+            [
+              23.3575,
+              42.7265
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 14,
+        "regname": "ж.к. Манастирски извор",
+        "kvartal": "Манастирски извор",
+        "godina": 2021,
+        "etaz": 5,
+        "spalen": 1,
+        "cena_ap": 350711.73,
+        "area_kv_m": 82.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-15",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3235,
+              42.7095
+            ],
+            [
+              23.3265,
+              42.7095
+            ],
+            [
+              23.3265,
+              42.7125
+            ],
+            [
+              23.3235,
+              42.7125
+            ],
+            [
+              23.3235,
+              42.7095
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 15,
+        "regname": "ж.к. Лагера - зона А",
+        "kvartal": "Лагера",
+        "godina": 1997,
+        "etaz": 3,
+        "spalen": 1,
+        "cena_ap": 156013.12,
+        "area_kv_m": 47.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-16",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3205,
+              42.6995
+            ],
+            [
+              23.3235,
+              42.6995
+            ],
+            [
+              23.3235,
+              42.7025
+            ],
+            [
+              23.3205,
+              42.7025
+            ],
+            [
+              23.3205,
+              42.6995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 16,
+        "regname": "ж.к. Сердика",
+        "kvartal": "Сердика",
+        "godina": 1987,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 359219.54,
+        "area_kv_m": 71.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-17",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3305,
+              42.7395
+            ],
+            [
+              23.3335,
+              42.7395
+            ],
+            [
+              23.3335,
+              42.7425
+            ],
+            [
+              23.3305,
+              42.7425
+            ],
+            [
+              23.3305,
+              42.7395
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 17,
+        "regname": "ж.к. Подуяне",
+        "kvartal": "Подуяне",
+        "godina": 2009,
+        "etaz": 2,
+        "spalen": 2,
+        "cena_ap": 271417.7,
+        "area_kv_m": 55.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-18",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3375,
+              42.7465
+            ],
+            [
+              23.3405,
+              42.7465
+            ],
+            [
+              23.3405,
+              42.7495
+            ],
+            [
+              23.3375,
+              42.7495
+            ],
+            [
+              23.3375,
+              42.7465
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 18,
+        "regname": "ж.к. Борово",
+        "kvartal": "Борово",
+        "godina": 2000,
+        "etaz": 7,
+        "spalen": 1,
+        "cena_ap": 473338.43,
+        "area_kv_m": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-19",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3425,
+              42.7445
+            ],
+            [
+              23.3455,
+              42.7445
+            ],
+            [
+              23.3455,
+              42.7475
+            ],
+            [
+              23.3425,
+              42.7475
+            ],
+            [
+              23.3425,
+              42.7445
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 19,
+        "regname": "ж.к. Росенец",
+        "kvartal": "Росенец",
+        "godina": 2022,
+        "etaz": 5,
+        "spalen": 1,
+        "cena_ap": 524720.63,
+        "area_kv_m": 104.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-20",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3335,
+              42.7525
+            ],
+            [
+              23.3365,
+              42.7525
+            ],
+            [
+              23.3365,
+              42.7555
+            ],
+            [
+              23.3335,
+              42.7555
+            ],
+            [
+              23.3335,
+              42.7525
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 20,
+        "regname": "ж.к. Гоце Делчев",
+        "kvartal": "Гоце Делчев",
+        "godina": 1991,
+        "etaz": 8,
+        "spalen": 1,
+        "cena_ap": 408019.97,
+        "area_kv_m": 78.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-21",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3465,
+              42.6825
+            ],
+            [
+              23.3495,
+              42.6825
+            ],
+            [
+              23.3495,
+              42.6855
+            ],
+            [
+              23.3465,
+              42.6855
+            ],
+            [
+              23.3465,
+              42.6825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 21,
+        "regname": "ж.к. Зад моста",
+        "kvartal": "Зад моста",
+        "godina": 2020,
+        "etaz": 9,
+        "spalen": 1,
+        "cena_ap": 178887.95,
+        "area_kv_m": 49.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-22",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3285,
+              42.7595
+            ],
+            [
+              23.3315,
+              42.7595
+            ],
+            [
+              23.3315,
+              42.7625
+            ],
+            [
+              23.3285,
+              42.7625
+            ],
+            [
+              23.3285,
+              42.7595
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 22,
+        "regname": "ж.к. Фонковица",
+        "kvartal": "Фонковица",
+        "godina": 2016,
+        "etaz": 9,
+        "spalen": 1,
+        "cena_ap": 713310.45,
+        "area_kv_m": 132.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-23",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3165,
+              42.7085
+            ],
+            [
+              23.3195,
+              42.7085
+            ],
+            [
+              23.3195,
+              42.7115
+            ],
+            [
+              23.3165,
+              42.7115
+            ],
+            [
+              23.3165,
+              42.7085
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 23,
+        "regname": "ж.к. Лозенец",
+        "kvartal": "Лозенец",
+        "godina": 2007,
+        "etaz": 5,
+        "spalen": 1,
+        "cena_ap": 814996.93,
+        "area_kv_m": 141.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-24",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3015,
+              42.6825
+            ],
+            [
+              23.3045,
+              42.6825
+            ],
+            [
+              23.3045,
+              42.6855
+            ],
+            [
+              23.3015,
+              42.6855
+            ],
+            [
+              23.3015,
+              42.6825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 24,
+        "regname": "ж.к. Южен парк",
+        "kvartal": "Южен парк",
+        "godina": 2022,
+        "etaz": 6,
+        "spalen": 1,
+        "cena_ap": 203866.77,
+        "area_kv_m": 51.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-25",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3135,
+              42.7315
+            ],
+            [
+              23.3165,
+              42.7315
+            ],
+            [
+              23.3165,
+              42.7345
+            ],
+            [
+              23.3135,
+              42.7345
+            ],
+            [
+              23.3135,
+              42.7315
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 25,
+        "regname": "ж.к. Даръквалие",
+        "kvartal": "Даръквалие",
+        "godina": 1991,
+        "etaz": 9,
+        "spalen": 1,
+        "cena_ap": 295539.88,
+        "area_kv_m": 66.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-26",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3405,
+              42.7355
+            ],
+            [
+              23.3435,
+              42.7355
+            ],
+            [
+              23.3435,
+              42.7385
+            ],
+            [
+              23.3405,
+              42.7385
+            ],
+            [
+              23.3405,
+              42.7355
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 26,
+        "regname": "ж.к. Хижата",
+        "kvartal": "Хижата",
+        "godina": 2013,
+        "etaz": 7,
+        "spalen": 1,
+        "cena_ap": 178716.18,
+        "area_kv_m": 43.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-27",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3625,
+              42.6775
+            ],
+            [
+              23.3655,
+              42.6775
+            ],
+            [
+              23.3655,
+              42.6805
+            ],
+            [
+              23.3625,
+              42.6805
+            ],
+            [
+              23.3625,
+              42.6775
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 27,
+        "regname": "ж.к. Илинка",
+        "kvartal": "Бон关切",
+        "godina": 2017,
+        "etaz": 8,
+        "spalen": 1,
+        "cena_ap": 149463.72,
+        "area_kv_m": 59.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-28",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3155,
+              42.7375
+            ],
+            [
+              23.3185,
+              42.7375
+            ],
+            [
+              23.3185,
+              42.7405
+            ],
+            [
+              23.3155,
+              42.7405
+            ],
+            [
+              23.3155,
+              42.7375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 28,
+        "regname": "ж.к. Б пита",
+        "kvartal": "Долна баня",
+        "godina": 1989,
+        "etaz": 7,
+        "spalen": 1,
+        "cena_ap": 138366.59,
+        "area_kv_m": 38.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-29",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3545,
+              42.6645
+            ],
+            [
+              23.3575,
+              42.6645
+            ],
+            [
+              23.3575,
+              42.6675
+            ],
+            [
+              23.3545,
+              42.6675
+            ],
+            [
+              23.3545,
+              42.6645
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 29,
+        "regname": "ж.к. Звенигород",
+        "kvartal": "Звенигород",
+        "godina": 2016,
+        "etaz": 2,
+        "spalen": 1,
+        "cena_ap": 206443.41,
+        "area_kv_m": 73.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-30",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3275,
+              42.7275
+            ],
+            [
+              23.3305,
+              42.7275
+            ],
+            [
+              23.3305,
+              42.7305
+            ],
+            [
+              23.3275,
+              42.7305
+            ],
+            [
+              23.3275,
+              42.7275
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 30,
+        "regname": "ж.к. Терлик",
+        "kvartal": "Терлик",
+        "godina": 1993,
+        "etaz": 7,
+        "spalen": 1,
+        "cena_ap": 340660.6,
+        "area_kv_m": 84.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-31",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3085,
+              42.7285
+            ],
+            [
+              23.3115,
+              42.7285
+            ],
+            [
+              23.3115,
+              42.7315
+            ],
+            [
+              23.3085,
+              42.7315
+            ],
+            [
+              23.3085,
+              42.7285
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 31,
+        "regname": "ж.к. Искърски стой",
+        "kvartal": "Искър",
+        "godina": 1994,
+        "etaz": 3,
+        "spalen": 2,
+        "cena_ap": 233792.49,
+        "area_kv_m": 55.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-32",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3305,
+              42.7395
+            ],
+            [
+              23.3335,
+              42.7395
+            ],
+            [
+              23.3335,
+              42.7425
+            ],
+            [
+              23.3305,
+              42.7425
+            ],
+            [
+              23.3305,
+              42.7395
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 32,
+        "regname": "ж.к. Подуяне - блок 12",
+        "kvartal": "Подуяне",
+        "godina": 2003,
+        "etaz": 9,
+        "spalen": 1,
+        "cena_ap": 250044.06,
+        "area_kv_m": 62.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prop-33",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.3095,
+              42.6935
+            ],
+            [
+              23.3125,
+              42.6935
+            ],
+            [
+              23.3125,
+              42.6965
+            ],
+            [
+              23.3095,
+              42.6965
+            ],
+            [
+              23.3095,
+              42.6935
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 33,
+        "regname": "ж.к. Витоша - Планина",
+        "kvartal": "Витоша",
+        "godina": 1992,
+        "etaz": 7,
+        "spalen": 1,
+        "cena_ap": 441287.47,
+        "area_kv_m": 67.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "river-iskar",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              23.61,
+              42.42
+            ],
+            [
+              23.62,
+              42.43
+            ]
+          ],
+          [
+            [
+              23.63,
+              42.44
+            ],
+            [
+              23.64,
+              42.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 9001,
+        "kanal": 0.0,
+        "name_": "Искър",
+        "length_m": 650.5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "park-borisova",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.7,
+              42.5
+            ],
+            [
+              23.71,
+              42.5
+            ],
+            [
+              23.71,
+              42.51
+            ],
+            [
+              23.7,
+              42.51
+            ],
+            [
+              23.7,
+              42.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "object_id": 9002,
+        "type_": 1.0,
+        "name_": "Парк Борисова градина",
+        "area_kv_m": 3610.93
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "timestamp": "01-01-2026_10",
+  "source_snapshot": "storage/normalized/01-01-2026_10",
+  "total_datasets": 1,
+  "successful_datasets": 1,
+  "failed_datasets": 0,
+  "total_records": 6,
+  "datasets": [
+    {
+      "dataset_id": "999",
+      "source": "sofiaplan",
+      "file": "sofiaplan/dataset_999.json",
+      "status": "SUCCESS",
+      "input_records": 6,
+      "output_records": 6,
+      "duplicate_records": 0
+    }
+  ]
+}
