@@ -1,0 +1,100 @@
+name: Automated Tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: pytest - ai-property-market
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-property-market
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: ai-property-market/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Downloads must refuse to run without an explicit opt-in flag.
+      - name: Verify that downloads stay disabled
+        run: |
+          if python main.py --collect; then
+            echo "::error::--collect should have been blocked"
+            exit 1
+          fi
+          echo "[OK] --collect is blocked by default"
+
+      - name: Run the pipeline on the bundled sample data
+        run: |
+          python main.py --setup-force
+          python main.py --pipeline
+
+      - name: Run the test suite
+        run: python -m pytest tests -q --junitxml=test-results/junit.xml
+
+      - name: Upload JUnit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-junit
+          path: ai-property-market/test-results/junit.xml
+          if-no-files-found: ignore
+
+  dotnet-unit:
+    name: dotnet test - NUnit + Moq
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - dotnet-test-automation/unit-tests-nunit-moq/ItemManagement/ItemManagement.sln
+          - dotnet-test-automation/unit-tests-nunit-moq/NotificationApplication/NotificationApp.sln
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Run unit tests
+        run: dotnet test "${{ matrix.project }}" --nologo
+
+  dotnet-build:
+    name: dotnet build - Selenium WebDriver suites
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - dotnet-test-automation/e2e-idea-center/IdeaCenterPrep.sln
+          - dotnet-test-automation/e2e-storyspoil-selenium-ide/StorySpoilSeleniumTests/StorySpoilSeleniumTests.sln
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      # The end-to-end suites need a reachable application and a local
+      # Chrome install, so CI only proves they compile. Run them locally.
+      - name: Build
+        run: dotnet build "${{ matrix.project }}" --nologo

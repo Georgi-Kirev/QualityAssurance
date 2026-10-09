@@ -1,0 +1,59 @@
+# ================================================================
+#   AI PROPERTY MARKET - .gitignore
+#   Проектът е некомерсиален хоби проект. В репозитото влиза
+#   КОДЪТ и малкият примерен набор в sample_data/. Всичко
+#   генерирано при изпълнение - извън.
+# ================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environment ---
+.venv/
+.venv-*/
+venv/
+env/
+
+# --- Тестове / покритие ---
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+coverage.json
+tests/_last_run/
+test-results/
+
+# --- Runtime данни (генерирани, не се версионират) ---
+# Идват от `python main.py --setup` + `--pipeline`.
+storage/
+storage_raw/
+
+# --- Логове / временни ---
+*.log
+bat_log.txt
+*.tmp
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Secrets (НИКОГА не се версионират) ---
+.env
+.env.*
+*.pem
+*.key
+secrets.json

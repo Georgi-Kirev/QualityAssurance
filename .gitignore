@@ -1,0 +1,97 @@
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+*.dll
+*.exe
+*.pdb
+*.user
+*.suo
+*.userprefs
+
+# ---------------------------------------------------------------------------
+# Visual Studio / Rider / VS Code
+# ---------------------------------------------------------------------------
+.vs/
+.vscode/
+.idea/
+*.sln.docstates
+*.userosscache
+*.sln.???
+TestResults/
+
+# ---------------------------------------------------------------------------
+# NuGet
+# ---------------------------------------------------------------------------
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ---------------------------------------------------------------------------
+# Test results and coverage
+# ---------------------------------------------------------------------------
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# ---------------------------------------------------------------------------
+# Selenium / browser automation
+# ---------------------------------------------------------------------------
+# Screenshots and page dumps captured while debugging a failing test
+Screenshots/
+screenshots/
+*.html.*.png
+selenium*.log
+chromedriver.exe
+geckodriver.exe
+msedgedriver.exe
+
+# ---------------------------------------------------------------------------
+# Local secrets and machine-specific settings
+# ---------------------------------------------------------------------------
+# Credentials belong in environment variables or user secrets, never in git.
+*.env
+.env
+.env.*
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+TestResults.json
+
+# ---------------------------------------------------------------------------
+# Python (ai-property-market)
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+test-results/
+
+# ---------------------------------------------------------------------------
+# OS noise
+# ---------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+*.lnk

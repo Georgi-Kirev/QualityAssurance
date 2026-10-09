@@ -1,0 +1,38 @@
+# ================================================================
+#   AI PROPERTY MARKET - зависимости
+#
+#   Инсталиране:
+#     python -m venv .venv
+#     .venv\Scripts\activate
+#     pip install -r requirements.txt
+#
+#   Проектът е Python 3.10+ ориентиран, изисква стандартната
+#   библиотека (urllib, json, csv, zipfile, zoneinfo) и това
+#   малко допълнително. Няма рамка, няма ORM, няма build стъпка.
+# ================================================================
+
+# --- Runtime ---
+
+# Flask: dashboard-ът и search API-то
+Flask==3.1.3
+
+# requests: HTTP клиент за колекторите (само ако мрежата е
+#           разрешена през AI_PROPERTY_ALLOW_NETWORK=1)
+requests==2.34.2
+
+# ijson: streaming JSON parse - pipeline-ът не чете файловете
+#        в RAM, а ги обхожда запис по запис
+ijson==3.5.1
+
+# tzdata: Europe/Sofia timezone (Windows няма tz database)
+tzdata==2026.4
+
+# psutil: изчисляване на броя workers по свободна RAM
+psutil==7.2.2
+
+# --- Тестове ---
+# Само за тях, не са нужни за работа на приложението.
+# Тестовата галерия е основният фокус на проекта.
+
+pytest==9.1.1
+pytest-cov==7.1.0
