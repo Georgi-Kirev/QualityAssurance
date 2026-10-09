@@ -1,4 +1,4 @@
-# QA Portfolio — Georgi Kirev
+﻿# QA Portfolio — Georgi Kirev
 
 Automated and manual testing work, built as a portfolio to demonstrate how I
 approach quality assurance: designing test cases, finding real defects,
@@ -17,7 +17,7 @@ are regression tests for defects that actually happened.
 manual test cases and the Postman collections are exercises from my QA
 training at SoftUni plus projects I took on myself. That code is mine.
 
-**729 automated tests in total: 680 in Python (pytest), 49 in C# (NUnit).**
+**731 automated tests in total: 682 in Python (pytest), 49 in C# (NUnit).**
 
 | | |
 |---|---|
@@ -35,7 +35,7 @@ training at SoftUni plus projects I took on myself. That code is mine.
 
 | Folder | Origin | What it is |
 |---|---|---|
-| [`ai-property-market/`](ai-property-market/) | **AI-assisted, my project** | A Python data pipeline (normalize → deduplicate → match → export) plus a Flask search API, covered by 680 automated tests. Start here. |
+| [`ai-property-market/`](ai-property-market/) | **AI-assisted, my project** | A Python data pipeline (normalize → deduplicate → match → export) plus a Flask search API, covered by 682 automated tests. Start here. |
 | [`dotnet-test-automation/`](dotnet-test-automation/) | My work — SoftUni exercise + own initiative | 49 automated tests in C#: unit testing with NUnit and Moq, Selenium IDE recordings, and Selenium WebDriver end-to-end suites. |
 | [`manual-tests-web-app-scrum/`](manual-tests-web-app-scrum/) | My work — SoftUni exercise | Manual test cases and test runs for a web application under test (Scrum board), with evidence screenshots. |
 | [`manual-test-cases/`](manual-test-cases/) | My work — my own template and examples | Test case templates and suites — my reusable QA_Manual_Test_Case_Template, plus worked examples for SauceDemo and Facebook login. |
@@ -54,7 +54,7 @@ python -m venv .venv
 .venv\Scripts\activate          # Linux/macOS: source .venv/bin/activate
 pip install -r requirements.txt
 
-python main.py --tests          # 680 tests, no network, under 10 seconds
+python main.py --tests          # 682 tests, no network, under 10 seconds
 python main.py --demo           # sample data -> pipeline -> dashboard
 ```
 
@@ -108,7 +108,7 @@ Details per suite are in [`dotnet-test-automation/README.md`](dotnet-test-automa
 [`.github/workflows/tests.yml`](.github/workflows/tests.yml) runs on every push
 and pull request:
 
-1. `pytest` — the full 680-test Python suite, plus the offline pipeline itself.
+1. `pytest` — the full 682-test Python suite, plus the offline pipeline itself.
 2. `dotnet test` — both NUnit/Moq unit solutions (27 tests).
 3. `dotnet build` — both Selenium WebDriver solutions, so they cannot rot.
 
